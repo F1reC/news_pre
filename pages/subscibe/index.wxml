@@ -1,0 +1,12 @@
+<view>
+  <view class="subscibes">
+
+    <view class="subs" wx:for="{{ channels }}" wx:key="id">
+      <navigator class="subs__hd" url="/pages/subscibe/article?channel={{ item.id }}">
+        <image class="subs__head" src="{{ item.avatar }}"></image>
+        <text>{{ item.name }}</text>
+        <image class="subs__icon" src="/image/icon-more.png"></image>
+      </navigator>
+    </view>
+  </view>
+</view>
