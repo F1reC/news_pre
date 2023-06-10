@@ -1,21 +1,30 @@
+<!-- 引入article.wxml模板，这个模板可能包含文章样式相关的代码 -->
 <import src="../common/template/article.wxml"/>
 
 <view>
+    <!-- 展示作者信息的区域 -->
     <view class="author__card">
         <view>
+            <!-- 展示作者头像 -->
             <image class="author__headimg" src="{{ channel.avatar }}"></image>
+            <!-- 展示作者名字 -->
             <view class="author__info">{{ channel.name }}</view>
         </view>
+        <!-- 展示作者说明信息 -->
         <view class="author__remark">
             这里只是用于展示的测试数据，包含以下的新闻列表均为模拟数据，仅供测试，朋友你好，我是 {{ channel.name }}，账号是{{ channel.account }}。
         </view>
     </view>
 
+    <!-- 展示文章列表的区域 -->
     <view class="articles">
+        <!-- wx:key用于提升列表的性能，这里的"id"是每个item的唯一标识 -->
+        <!-- 每个item使用的模板由'newsStyle' + item.style决定，然后通过data传入item的数据 -->
         <block wx:for="{{ articles }}" wx:key="id">
             <template is="{{ 'newsStyle' + item.style }}" data="{{ ...item }}" />
         </block>
     </view>
 
+    <!-- 引入footer.wxml模板，这个模板可能包含页面底部的代码 -->
     <include src="../common/template/footer.wxml"/>
 </view>
