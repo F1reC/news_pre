@@ -1,53 +1,68 @@
+/* 我的关注页面 */
+
+/* 容器样式 */
 .container{
-    width: 700rpx;
-    margin: 10px auto;
-    font-size: 32rpx;
+  width: 700rpx; /* 设置容器宽度为700rpx */
+  margin: 10px auto; /* 上下外边距为10px，左右自动居中 */
+  font-size: 32rpx; /* 字体大小为32rpx */
 }
+
+/* 管理样式 */
 .manage{
-    margin-bottom: 70rpx;
+  margin-bottom: 70rpx; /* 底部外边距为70rpx */
 }
+
+/* 管理头部样式 */
 .manage__hd{
-    height: 50rpx;
-    line-height: 50rpx;
-    border-bottom: 4rpx solid #d81e06;
+  height: 50rpx; /* 高度为50rpx */
+  line-height: 50rpx; /* 行高为50rpx */
+  border-bottom: 4rpx solid #d81e06; /* 底部边框为4rpx实线，颜色为#d81e06 */
 }
 
+/* 管理标题样式 */
 .manage__title{
-    font-weight: 500;
+  font-weight: 500; /* 字体粗细为500 */
 }
 
+/* 管理提示样式 */
 .manage__tips{
-    font-weight: 300;
-    font-size: 22rpx;
-    padding: 0 10rpx;
-    float: right;
-    color:#666;
+  font-weight: 300; /* 字体粗细为300 */
+  font-size: 22rpx; /* 字体大小为22rpx */
+  padding: 0 10rpx; /* 左右内边距为10rpx */
+  float: right; /* 右浮动 */
+  color: #666; /* 字体颜色为#666 */
 }
 
+/* 管理内容样式 */
 .manage__bd{
-    padding-top: 20rpx;
+  padding-top: 20rpx; /* 顶部内边距为20rpx */
 }
 
+/* 管理标签样式 */
 .manage__tag{
-    padding: 10rpx 20rpx;
-    border: 1px solid #ccc;
-    border-radius: 8rpx;
-    color:#ccc;
-    font-size: 24rpx;
-    display: inline-block;
-    margin: 10rpx;
+  padding: 10rpx 20rpx; /* 上下内边距为10rpx，左右内边距为20rpx */
+  border: 1px solid #ccc; /* 边框为1px实线，颜色为#ccc */
+  border-radius: 8rpx; /* 边框圆角为8rpx */
+  color: #ccc; /* 字体颜色为#ccc */
+  font-size: 24rpx; /* 字体大小为24rpx */
+  display: inline-block; /* 行内块元素 */
+  margin: 10rpx; /* 上下外边距为10rpx，左右外边距为10rpx */
 }
 
+/* 激活状态样式 */
 .active{
-    color:#d81e06;
-    border-color: #d81e06;
+  color: #d81e06; /* 字体颜色为#d81e06 */
+  border-color: #d81e06; /* 边框颜色为#d81e06 */
 }
 
+/* 控制按钮样式 */
 .btn__control{
-    padding: 10px;
-    width: 99%;
+  padding: 10px; /* 内边距为10px */
+  width: 99%; /* 宽度为99% */
 }
+
+/* 小型控制按钮样式 */
 .btn__control__mini{
-    margin-bottom: 20rpx;
-    font-size: 26rpx;
+  margin-bottom: 20rpx; /* 底部外边距为20rpx */
+  font-size: 26rpx; /* 字体大小为26rpx */
 }

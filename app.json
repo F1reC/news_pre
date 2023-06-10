@@ -33,12 +33,6 @@
         "text": "订阅"
       },
       {
-        "pagePath": "pages/found/index",
-        "iconPath": "image/icon-like.png",
-        "selectedIconPath": "image/icon-like-a.png",
-        "text": "发现"
-      },
-      {
         "pagePath": "pages/user/index",
         "iconPath": "image/icon-user.png",
         "selectedIconPath": "image/icon-user-a.png",

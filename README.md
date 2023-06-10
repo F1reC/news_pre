@@ -1,22 +1,16 @@
-# 实现一个新闻展示网站
+# wechatapp-news-reader
+微信小程序 —— 新闻阅读器（示例）
 
-- 小程序可以运行，后端云存储/本地都可以
+## 说明
 
-- Base 3个页面 – （0~50 point）
-  - 新闻展示collection页面
-  - 新闻detail页面 
-  - 个人收藏新闻页面
+- 所有数据均为模拟的假数据，见 `mock` 文件夹
+- 富文本解析使用 [mp-html](https://github.com/jin-yufeng/mp-html)
 
-- 页面间切换 – （0~10 point）
-  - 个人收藏新闻页面和collection页面tabbar切换
-  - Detail页面和collection页面/个人收藏页用返回键切换
+## 界面截图
 
-- Collection实现触底加载+下拉刷新 – （0~10 point）
-
-- 新闻detail页面实现收藏功能并在个人收藏页展示 – （0~10 point）
-
-- 新闻detail页面实现评论功能 – （0~10 point）
-
-- 展示&组内分工 – （0~10 point）
-
-- Out of Expectation – （0~20 point）
+<img style="margin:10px" width="320" src="screenshots/demo1.png" alt="主页页面">
+<img style="margin:10px" width="320" src="screenshots/demo2.png" alt="设置页面">
+<img style="margin:10px" width="320" src="screenshots/demo3.png" alt="专题页面">
+<img style="margin:10px" width="320" src="screenshots/demo4.png" alt="专题列表页面">
+<img style="margin:10px" width="320" src="screenshots/demo5.png" alt="详情页面">
+<img style="margin:10px" width="320" src="screenshots/demo6.png" alt="发现">
