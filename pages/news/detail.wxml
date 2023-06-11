@@ -3,21 +3,21 @@
 <view class="page__detail">
     <view class="detail">
         <view class="detail__title">
-            {{ article.title }}
+            {{ article.title }} <!-- 显示文章标题 -->
         </view>
         <view class="article__desc">
-            <text class="article__source" wx:if="{{ article.author_name }}">{{ article.author_name }}</text>
-            <text class="article__time">{{ article.dayTime }}</text>
+            <text class="article__source" wx:if="{{ article.author_name }}">{{ article.author_name }}</text> <!-- 显示作者名字 -->
+            <text class="article__time">{{ article.dayTime }}</text> <!-- 显示文章时间 -->
             <view class="article__count">
-                <image class="article__icon" src="/image/icon-comt.png"></image>
-                <text>{{ article.comment }}</text>
-                <image class="article__icon" src="/image/icon-priaze.png"></image>
-                <text>{{ article.praise }}</text>
+                <image class="article__icon" src="/image/icon-comt.png"></image> <!-- 评论图标 -->
+                <text>{{ article.comment }}</text> <!-- 显示评论数 -->
+                <image class="article__icon" src="/image/icon-priaze.png"></image> <!-- 点赞图标 -->
+                <text>{{ article.praise }}</text> <!-- 显示点赞数 -->
             </view>
         </view>
 
         <view class="article__content">
-            <mp-html content="{{ article.content }}" tag-style="{{ tagStyle }}" />
+            <mp-html content="{{ article.content }}" tag-style="{{ tagStyle }}" /> <!-- 显示文章内容 -->
         </view>
     </view>
 </view>
@@ -26,8 +26,8 @@
 <view class="detail__relation">
     <view class="relation__title">相关新闻</view>
     <block wx:for="{{ relations }}" wx:key="id">
-        <template is="{{ 'newsStyle' + item.style }}" data="{{ ...item }}" />
+        <template is="{{ 'newsStyle' + item.style }}" data="{{ ...item }}" /> <!-- 显示相关新闻列表 -->
     </block>
 </view>
 
-<include src="../common/template/footer.wxml"/>
+<include src="../common/template/footer.wxml"/> <!-- 包含公共底部模板 -->

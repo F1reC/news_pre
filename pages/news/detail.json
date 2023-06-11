@@ -1,5 +1,6 @@
+  //使用 mp-html 组件
 {
   "usingComponents": {
-      "mp-html": "/components/mp-html/index"
+      "mp-html": "/components/mp-html/index" 
   }
 }

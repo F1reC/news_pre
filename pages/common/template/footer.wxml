@@ -1,7 +1,12 @@
+<!-- 这是一个底部视图 -->
 <view class="weui-footer">
+    <!-- 这是底部链接的容器 -->
     <view class="weui-footer__links">
+        <!-- 这是一个链接到Github的导航器 -->
         <navigator url="" class="weui-footer__link">Github</navigator>
+        <!-- 这是一个链接到微信的导航器 -->
         <navigator url="" class="weui-footer__link">Wechat</navigator>
     </view>
+    <!-- 这是版权信息的容器 -->
     <view class="weui-footer__text">©2022 Super Cook, Inc. All Rights Reserved.</view>
 </view>

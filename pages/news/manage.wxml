@@ -1,11 +1,17 @@
+
+// 页面主体
 <view class="container">
+
+   // 我的频道
    <view class="manage">
         <view class="manage__hd">
             <text class="manage__title">我的频道</text>
             <text class="manage__tips">点击删除频道</text>
         </view>
         <view class="manage__bd">
+            // 遍历已选择的频道列表
             <block wx:for="{{ categoryList }}" wx:key="id" wx:if="{{ item.selected }}">
+                // 点击标签删除频道
                 <view bindtap="delSubscribe" data-id="{{ item.id }}" class="manage__tag">
                     {{ item.name }}
                 </view>
@@ -13,13 +19,16 @@
         </view>
    </view>
 
+   // 全部频道
    <view class="manage">
         <view class="manage__hd">
             <text class="manage__title">全部频道</text>
             <text class="manage__tips">点击添加频道</text>
         </view>
         <view class="manage__bd">
+            // 遍历所有频道列表
             <block wx:for="{{ categoryList }}" wx:key="id">
+                // 点击标签添加或删除频道
                 <view bindtap="addSubscribe" data-id="{{ item.id }}" class="manage__tag {{ item.selected ? 'active' : '' }}">
                     {{ item.name }}
                 </view> 
@@ -27,9 +36,11 @@
         </view>
    </view>
 
-
+   // 底部按钮
    <view class="btn__control">
+        // 全部选择按钮
         <button bindtap="subscribeAll" type="default" class="btn__control__mini">全部选择</button>
+        // 返回首页按钮
         <button bindtap="onBackHome" type="primary" class="btn__control__mini">返回首页</button>
    </view>
 </view>

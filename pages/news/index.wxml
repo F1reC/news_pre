@@ -1,10 +1,11 @@
 <!-- index.wxml -->
-
+<!--导入 article.wxml 模板文件-->
 <import src="../common/template/article.wxml"/>
-
+<!--显示一个视图容器。-->
 <view>
     <!-- 头部导航 -->
     <view class="header">
+      <!--显示一个头部导航栏，其中包含一个横向滚动的 scroll-view 容器，用于展示不同的分类标签。每个标签都是一个 view 元素，绑定了一个点击事件 changeCategory，同时传递了一个 data-id 属性，用于标识该标签的 id。-->
         <scroll-view class="sv__container" scroll-x="true">
             <block wx:for="{{ categoryTabs }}" wx:key="id">
                 <view 
@@ -15,10 +16,14 @@
                 </view>
             </block>
         </scroll-view>
+        <!--显示一个图片元素，用于管理标签。-->
         <image bindtap="manageTabs" class="sv-manager" src="/image/icon-manage.png"></image>
     </view>
     <!-- 滚动页面 -->
-    <swiper class="swiper__container" wx:if="{{ bannerList.length }}" indicator-dots="{{ false }}" autoplay="true" interval="3000">
+    <swiper class="swiper__container" wx:if="{{ bannerList.length }}" 
+    indicator-dots="{{ false }}" autoplay="true" interval="3000">
+ 
+<!--显示一个 swiper 容器，用于展示轮播图。每个轮播图都是一个 swiper-item 元素，包含一个图片元素和一个描述信息。-->
         <swiper-item wx:for="{{ bannerList }}" wx:key="id">
             <view class="swiper__content">
                 <image src="{{ item.image }}" class="swiper__item" mode="aspectFill"  />
@@ -31,10 +36,11 @@
     </swiper>
     <view class="articles" wx:if="news && news.categoryId">
         <block wx:for="{{ news.newsList }}">
+          <!--显示一个文章列表，其中包含多个文章元素。每个文章元素都是一个 template 元素，根/据不同的样式渲染不同的文章样式。-->
             <template is="{{ 'newsStyle' + item.style }}" data="{{ ...item }}" />
         </block>
     </view>
-
+    <!--导入 footer.wxml 模板文件，用于显示页面底部的版权信息。-->
     <include src="../common/template/footer.wxml"/>
 
 </view>
