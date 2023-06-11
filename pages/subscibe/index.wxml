@@ -3,7 +3,9 @@
 
     <view class="subs" wx:for="{{ channels }}" wx:key="id">
       <navigator class="subs__hd" url="/pages/subscibe/article?channel={{ item.id }}">
+      <!-- 展示作者头像 -->
         <image class="subs__head" src="{{ item.avatar }}"></image>
+         <!-- 展示作者名字 -->
         <text>{{ item.name }}</text>
         <image class="subs__icon" src="/image/icon-more.png"></image>
       </navigator>
