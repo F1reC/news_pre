@@ -5,7 +5,8 @@ Page({
       userInfo: {
           nickname: '', // 用户昵称
           avatar: ''    // 用户头像URL
-      }
+      },
+      showLoginButton: true // 控制登录按钮的显示状态
   },
   // 获取用户数据的方法
   doGetUserData () {
@@ -14,11 +15,13 @@ Page({
           desc: '申请获取你的个人资料',  
           success: ({ userInfo }) => {  // 接口调用成功的回调函数
               // 更新页面数据中的用户信息，昵称和头像URL
+              
               this.setData({
                   userInfo: { 
                       nickname: userInfo.nickName, 
                       avatar: userInfo.avatarUrl 
-                  }
+                  },
+                  showLoginButton: false // 设置登录按钮不可见
               })
           },
           fail: () => wx.showToast({ 

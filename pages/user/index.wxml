@@ -10,6 +10,6 @@
   <!-- 用户操作区域 -->
   <view class="usermotto">
     <!-- 创建一个按钮，当点击时，执行doGetUserData方法，用于登录小程序 -->
-    <button block bindtap="doGetUserData" type="primary">登录到小程序</button>
+    <button block bindtap="doGetUserData" type="primary" wx:if="{{showLoginButton}}">登录到小程序</button>
   </view>
 </view>
