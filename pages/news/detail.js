@@ -30,3 +30,4 @@ Page({
         this.setData({ relations })
     }
 })
+//  detail.json使用 mp-html 组件

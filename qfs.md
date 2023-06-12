@@ -1,25 +1,11 @@
-{
-  "pages": [
-    "pages/news/index",
-    "pages/news/detail",
-    "pages/news/manage",
-    "pages/subscibe/index",
-    "pages/subscibe/article",
-    "pages/found/index",
-    "pages/user/index"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "News Reader",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#333",
-    "selectedColor": "#d81e06",
-    "borderStyle": "white",
-    "backgroundColor": "#ffffff",
-    "list": [
+底部菜单实现：
+<!-- 底部视图 -->
+<view class="weui-footer">
+ <!-- 链接到微信的导航器 -->
+        <navigator url="" class="weui-footer__link">Wechat</navigator>
+样式定义在app.wxss
+应用资源链接在app.json
+"list": [
       {
         "pagePath": "pages/news/index",
         "iconPath": "image/icon-news.png",
@@ -45,7 +31,12 @@
         "text": "我的"
       }
     ]
-  },
-  "debug": true,
-  "sitemapLocation": "sitemap.json"
-}
+图标更改可以去网上查
+
+    news上面的导航页在news/manage.wxml里
+     <view class="manage__bd">
+            // 遍历已选择的频道列表
+            <block wx:for="{{ categoryList }}" wx:key="id" wx:if="{{ item.selected }}">
+            categorylist没找到在哪
+
+

@@ -59,3 +59,4 @@ onBackHome(){
 },
 }
 )
+// manage.json页面标题
