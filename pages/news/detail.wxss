@@ -63,3 +63,18 @@
   line-height: 1.8; /* 行高为1.8倍 */
   margin-bottom: 14px; /* 底部外边距为14px */
 }
+
+/* 收藏功能悬浮按钮 */
+.float-button {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #1AAD19;
+  color: white;
+  border-radius: 50%;
+  z-index: 999;
+}

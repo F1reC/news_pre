@@ -51,16 +51,8 @@ Page({
         }
         this.setData({ news })
     },
-
-    // 页面相关事件处理函数--监听用户下拉动作，下拉刷新
-    onPullDownRefresh(){
-        this.newsCache = {}
-        this.doLoadNews()
-    },
-    // 到达底部，继续将在
-    onReachBottom(){
-        this.doLoadNews()
-    },
+ 
+    
     // 切换当前选择的分类
     changeCategory (event){
         const { newsCache } = this.data

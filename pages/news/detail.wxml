@@ -5,6 +5,10 @@
         <view class="detail__title">
             {{ article.title }}
         </view>
+        
+        <!-- 收藏悬浮按钮 -->
+        <view class="float-button" bindtap="addToFavorites" style="position: fixed; left: 610rpx; top: 1240rpx" wx:if="{{showFloatingButton}}">收藏</view>
+
         <view class="article__desc">
             <text class="article__source" wx:if="{{ article.author_name }}">{{ article.author_name }}</text>
             <text class="article__time">{{ article.dayTime }}</text>
