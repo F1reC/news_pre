@@ -8,13 +8,12 @@
         <view class="article__desc">
             <text class="article__source" wx:if="{{ article.author_name }}">{{ article.author_name }}</text>
             <text class="article__time">{{ article.dayTime }}</text>
-            <!-- 去掉评论点赞 -->
-            <!-- <view class="article__count">
+            <view class="article__count">
                 <image class="article__icon" src="/image/icon-comt.png"></image>
                 <text>{{ article.comment }}</text>
                 <image class="article__icon" src="/image/icon-priaze.png"></image>
                 <text>{{ article.praise }}</text>
-            </view> -->
+            </view>
         </view>
 
         <view class="article__content">

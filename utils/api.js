@@ -2,7 +2,9 @@
 // 这里设定了两个可能的域名，一个是本地的，一个是线上的
 // JSON 文件见 mock 文件夹
 // const DOMAIN = 'http://localhost:8080/mock'
-const DOMAIN = 'https://h5.ahmq.net/demo/miniapp-static-api/mock'
+
+ const DOMAIN = 'http://127.0.0.1:8080'
+//const DOMAIN = 'https://h5.ahmq.net/demo/miniapp-static-api/mock'
 
 // 定义一个通用的get请求函数
 export function get (url, data){

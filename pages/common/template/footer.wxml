@@ -3,5 +3,5 @@
         <navigator url="" class="weui-footer__link">Github</navigator>
         <navigator url="" class="weui-footer__link">Wechat</navigator>
     </view>
-    <view class="weui-footer__text">©2022 Super Cook, Inc. All Rights Reserved.</view>
+    <view class="weui-footer__text">.</view>
 </view>

@@ -52,11 +52,19 @@ Page({
         this.setData({ news })
     },
 
-    // 页面相关事件处理函数--监听用户下拉动作，下拉刷新
-    onPullDownRefresh(){
-        this.newsCache = {}
-        this.doLoadNews()
-    },
+    // 添加：页面相关事件处理函数--监听用户下拉动作，下拉刷新
+    onPullDownRefresh() { // 下拉显示三个 点在json中配置给出
+      // 显示顶部刷新图标，没有显示是因为网速太快了...;但是这个是顶部的text区域的加载
+      wx.showNavigationBarLoading(); 
+      // 刷新数据
+      this.setData({
+          newsCache: {},
+          news: {}
+      })
+      this.doLoadNews()
+      wx.showToast({title: '下拉刷新成功！',});
+      wx.stopPullDownRefresh() // 停止下拉刷新动画
+  },
     // 到达底部，继续将在
     onReachBottom(){
         this.doLoadNews()
@@ -96,8 +104,6 @@ Page({
                 return false
             }
         }
-
-        
 
         this._isLoading = true
         

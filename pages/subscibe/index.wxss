@@ -1,32 +1,51 @@
-.subscibes{
+.container {
+  background-color: #FAFBFC;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.07); /* Increased shadow effect */
+  border-radius: 10rpx;
+}
+
+.subscibes {
   margin-top: 2rpx;
 }
 
-.subs{
-  background-color: #fff;
+.subs {
+  background-color: #FFFFFF;
   margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1); /* Increased shadow effect */
+  border-radius: 10rpx;
+  transition: all 0.3s ease;
 }
 
-
-.subs__hd{
+.subs__hd {
   display: flex;
   align-items: center;
-  padding: 16rpx 20rpx;
+  padding: 40rpx 80rpx; /* Increased left and right padding */
   font-size: 36rpx;
   font-weight: 600;
-  justify-content:space-between;
-  border-bottom: 1rpx solid #eee;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #E1E4E8;
+  border-radius: 10rpx; /* Enhanced border-radius */
+  margin-right: 20rpx; /* Increased right margin to create more spacing */
+  margin-left: 20rpx; /* Increased left margin to create more spacing */
 }
 
-.subs__head{
+.subs__head {
   width: 56rpx;
   height: 56rpx;
   border-radius: 100%;
   padding: 0 16rpx;
+  transition: all 0.3s ease;
 }
 
-.subs__icon{
+.subs__icon {
   width: 40rpx;
   height: 40rpx;
-  right:0
+  margin-left: 10rpx;
+  transition: all 0.3s ease;
+}
+
+.subs__icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
 }
