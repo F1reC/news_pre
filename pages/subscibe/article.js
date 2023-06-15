@@ -19,7 +19,7 @@ Page({
     // 获取并设置当前频道的详细信息的异步方法
     async getChannelInfo () {
         const { channelId } = this.data // 获取当前频道ID
-        const channels = await getSubscribeChannels() // 获取用户订阅的所有频道
+        const channels = await getSubscribeChannels() // 获取所有频道
         const channel = channels.find(c => c.id == channelId) // 在所有订阅频道中找到当前频道
         this.setData({ channel }) // 更新当前频道信息
         wx.setNavigationBarTitle({ title: channel.name, }) // 将小程序的导航栏标题设置为当前频道的名字

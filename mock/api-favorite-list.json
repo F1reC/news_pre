@@ -1,5 +1,13 @@
 {
   "code": 0,
   "message": "请求成功",
-  "data": [{}]
+  "data": [{
+    "nickname":"Courage",
+    "newstitle":"test1"
+  },
+  {
+    "nickname":"Courageccc",
+    "newstitle":"test"
+  }
+]
 }
