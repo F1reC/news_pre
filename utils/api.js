@@ -1,9 +1,8 @@
 // API DOMAIN
 // 这里设定了两个可能的域名，一个是本地的，一个是线上的
 // JSON 文件见 mock 文件夹
-// const DOMAIN = 'http://localhost:8080/mock'
-const DOMAIN = 'https://h5.ahmq.net/demo/miniapp-static-api/mock'
-
+const DOMAIN = 'http://localhost:8080/mock'
+// const DOMAIN = 'https://h5.ahmq.net/demo/miniapp-static-api/mock'
 // 定义一个通用的get请求函数
 export function get (url, data){
   return request(url, 'GET', data)
@@ -71,6 +70,12 @@ export async function getNewsByCategory (categoryId, pageId = 1) {
 // 获取用户订阅的频道列表
 export async function getSubscribeChannels () {
   return await get('api-subscibe-list.json')
+}
+
+// TO:DO
+// 获取用户收藏列表
+export async function getFavoritesByUsername (Username) {
+  return await get('api-favorites-list.json', { Username })
 }
 
 // 获取文章的详细信息

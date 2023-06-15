@@ -6,7 +6,8 @@ Page({
           nickname: '', // 用户昵称
           avatar: ''    // 用户头像URL
       },
-      showLoginButton: true // 控制登录按钮的显示状态
+      showLoginButton: true, // 控制登录按钮的显示状态
+      favorites:[] // 收藏列表
   },
   // 获取用户数据的方法
   doGetUserData () {
@@ -23,6 +24,27 @@ Page({
                   },
                   showLoginButton: false // 设置登录按钮不可见
               })
+
+              // 获取收藏列表
+              wx.request({
+                url: 'https://example.com/api/getFavorites', // 服务器接口地址
+                data: {
+                    userId: userInfo.userId // 传递用户ID
+                },
+                success: (res) => {
+                    if (res.data.success) {
+                        // 把获取到的收藏列表数据保存到favorites数组中
+                        this.setData({
+                            favorites: res.data.favorites
+                        });
+                    } else {
+                        wx.showToast({
+                            title: '获取收藏列表失败',
+                            icon: 'error'
+                        });
+                    }
+                }
+            });
           },
           fail: () => wx.showToast({ 
               title: '获取失败', 
