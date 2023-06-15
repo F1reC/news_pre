@@ -1,5 +1,4 @@
 Page({
-  // 初始化页面数据
   data:{
       // 初始化用户信息对象
       userInfo: {
@@ -9,7 +8,6 @@ Page({
       showLoginButton: true, // 控制登录按钮的显示状态
       favorites:[] // 收藏列表
   },
-  // 获取用户数据的方法
   doGetUserData () {
       // 调用微信的获取用户信息API
       wx.getUserProfile({

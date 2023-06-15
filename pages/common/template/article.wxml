@@ -9,12 +9,6 @@
                 <view class="article__desc">
                     <text class="article__source" wx:if="{{ tag }}">{{ tag }}</text>
                     <text class="article__time">{{ date }}</text>
-                    <!-- <view class="article__count">
-                        <image class="article__icon" src="/image/icon-comt.png"></image>
-                        <text>{{ commont }}</text>
-                        <image class="article__icon" src="/image/icon-priaze.png"></image>
-                        <text>{{ parise }}</text>
-                    </view> -->
                 </view>
             </view>
         </view>

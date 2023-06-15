@@ -1,15 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- 创建一个可点击的区域，当点击时，执行bindViewTap方法 -->
-  <view bindtap="bindViewTap" class="userinfo">
-    <!-- 用户头像，如果userInfo.avatar有值，则展示用户头像，否则展示默认头像 -->
+  <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{ userInfo.avatar || '/image/default-avatar.png' }}" background-size="cover"></image>
-    <!-- 用户昵称，如果userInfo.nickname有值，则展示用户昵称，否则展示"游客" -->
     <text class="userinfo-nickname">{{ userInfo.nickname || '游客' }}</text>
   </view>
-  <!-- 用户操作区域 -->
   <view class="usermotto">
-    <!-- 创建一个按钮，当点击时，执行doGetUserData方法，用于登录小程序 -->
-    <button block bindtap="doGetUserData" type="primary" wx:if="{{showLoginButton}}">登录到小程序</button>
+    <button block bindtap="doGetUserData" type="primary">登录到小程序</button>
   </view>
 </view>

@@ -1,0 +1,7 @@
+<view class="tab-bar">
+  <!-- 自定义的 tabBarItem -->
+  <view class="tab-bar-item" wx:for="{{ tabBarList }}" wx:key="{{ index }}" bindtap="switchTab" data-index="{{ index }}">
+    <image class="tab-bar-icon" src="{{ item.iconPath }}" wx:if="{{ item.selected ? item.selectedIconPath : item.iconPath }}"></image>
+    <text class="tab-bar-text" style="{{ item.selected ? 'color: ' + selectedColor : '' }}">{{ item.text }}</text>
+  </view>
+</view>
