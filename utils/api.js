@@ -78,12 +78,18 @@ export async function getSubscribeChannels() {
   return await get('api-subscibe-list.json')
 }
 
-// TO:DO
 // 获取用户收藏列表
-export async function getFavoritesByUsername() {
-  return await get('api-favorite-list.json')
+// export async function getFavoritesByUsername() {
+//   return await get('api-favorite-list.json')
+// }
+export async function getFavoritesByUsername(nickname) {
+  const allFavorites = await get('api-favorite-list.json')
+  console.log(typeof allFavorites)
+  console.log(allFavorites)
+  const favoritesByNickname = allFavorites.filter(item => item.nickname === nickname)
+  console.log(favoritesByNickname)
+  return favoritesByNickname
 }
-
 
 // 获取文章的详细信息
 export async function getArticleDetail(articleId) {

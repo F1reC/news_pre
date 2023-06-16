@@ -19,14 +19,17 @@ Page({
       success: (async ({
         userInfo
       }) => { // 接口调用成功的回调函数
-        this.updateFavoritesList(),
-        this.setData({
-          userInfo: {
-            nickname: userInfo.nickName,
-            avatar: userInfo.avatarUrl,
-          },
-          showLoginButton: false, // 设置登录按钮不可见
-        });
+          this.setData({
+            userInfo: {
+              nickname: userInfo.nickName,
+              avatar: userInfo.avatarUrl,
+            },
+            showLoginButton: false, // 设置登录按钮不可见
+          });
+        const nickname = this.data.userInfo.nickname
+        console.log(nickname)
+        this.updateFavoritesList();
+        
       }),
       fail: () => wx.showToast({
         title: '获取失败',
@@ -34,9 +37,17 @@ Page({
       }) // 接口调用失败的回调函数
     })
   },
-  async updateFavoritesList () {
-    const favoriteList = await getFavoritesByUsername()
-    this.setData({ favoriteList })
+
+  // TO:DO
+  // 还算有进步，但得優化出搜索
+  async updateFavoritesList() {
+    const nickname = this.data.userInfo.nickname
+    console.log(nickname)
+    const favoriteList = await getFavoritesByUsername(nickname) // 獲取所有收藏列表
+    // const favoriteOfCurrentPerson = favoriteList.filter(item => item.nickname === nickname)
+    this.setData({
+      favoriteList
+    })
   }
 
 
